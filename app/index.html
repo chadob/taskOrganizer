@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Task Master </title>
+		<link href="index.css" type="text/css" rel ="stylesheet"/>
+	</head>
+	<body>
+		<header class="menu">
+			<form id="loginForm">
+				<input type="text" id="username" name="username" placeholder="Username..."/>
+				<input type="password" id="password" name="password" placeholder="Password..."/>
+				<input type="submit" id="login" value="Login" />
+				<a href=""> Create an Account </a>
+			</form>
+			<div id="logoutButton">
+				<span id="welcome"> Welcome </span> 
+				<span id="welcomeUsername"> </span>
+				<button id="logout"> Logout </button>
+			</div>
+			<div id="createAccount">
+					<form id="newAccount">
+						<input type="text" id="newUsername" name="newUsername" placeholder="Username..."/>
+						<input type="text" id="newPassword" name="newPassword" placeholder="Password..."/>
+						<input type="submit" id="create" value="Create" />
+					</form>
+		</header>
+			<div class="list">
+				<div class="listItem" id="Old"> 
+					<span class="listItemText" > Old </span> 
+				</div>
+				<div class="listItem listItemAfter" id="New"> 
+					<span class="listItemText"> New </span> 
+					<button class="removeTask"> x </button>
+				</div>
+				<div id="newItemButton"> 
+					<button id="showForm"> New Task</button>
+				</div>
+				<form id="newItemForm">
+					<input type="text" id="itemDescription" placeholder="Add Name..." />
+					<input type="submit" id="addButton" value="Add" />
+				</form>
+			</div>
+		<div class="taskDescription"> 
+			<form id="descriptionForm">
+				<input type="textarea" id="textArea"name="descriptionForm" maxlength="800"/>
+				<input type="submit" id="save" name ="save" value="Save"/>
+				<input type="submit" id="clear" name="clear" value="Clear"/>
+			</form>
+		</div>
+	<script src="jquery-1.11.3.js"></script>
+		<script src="menuScript.js"></script>
+	</body>
+</html>
