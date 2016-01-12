@@ -35,7 +35,6 @@ app.post('/taskDescriptions', function (req, res) {
 		res.json(task);
 	} else if (req.body.hasOwnProperty("taskList")){
 		var userTask = postAccountTask(req.body.taskList, req.body.username, taskdescriptions);
-		alert(req.body);
 		res.json(userTask);
 	} else {
 		delete taskdescriptions[req.body.username][req.body.taskToDo];

@@ -7,7 +7,7 @@ $(function() {
 			$this.addClass('active');
 			var chad = "chad";
 			var $username = $('#welcomeUsername').text();
-			$.get('http://localhost:3001/taskDescriptions', function(response) {
+			$.get('taskDescriptions', function(response) {
 				$('#textArea').val(response[$username][$this.attr('id')]);
 			});
 		}
@@ -123,7 +123,6 @@ $(function() {
 		if ($(this).data('clicked').id === ('save')) {
 			var currList = $('.listItem.active').attr('id');
 			var $username = $('#welcomeUsername').text();
-			alert($username);
 			var userTaskAndDescription = {user: $username, task: currList, description: newText}
 			$.post('taskDescriptions', userTaskAndDescription, function(response) {	
 			});
