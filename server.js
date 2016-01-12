@@ -35,13 +35,13 @@ app.post('/taskDescriptions', function (req, res) {
 		res.json(task);
 	} else if (req.body.hasOwnProperty("taskList")){
 		var userTask = postAccountTask(req.body.taskList, req.body.username, taskdescriptions);
-		console.log(req.body);
+		alert(req.body);
 		res.json(userTask);
 	} else {
 		delete taskdescriptions[req.body.username][req.body.taskToDo];
 		res.json(taskdescriptions);
 	}
 });
-app.listen(port, function() {
+/*app.listen(port, function() {
 	console.log('server started on port ' + port);
-});
+});*/
