@@ -42,6 +42,5 @@ app.post('/taskDescriptions', function (req, res) {
 		res.json(taskdescriptions);
 	}
 });
-/*app.listen(port, function() {
-	console.log('server started on port ' + port);
-});*/
+app.listen(port, function() {
+});
